@@ -44,6 +44,7 @@
 		DBE80A47272CED4000706499 /* MainWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainWindow.h; sourceTree = "<group>"; };
 		DBE80A48272CED4000706499 /* MainWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainWindow.m; sourceTree = "<group>"; };
 		DBE80A4A272DF56200706499 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DBE80A4B272DF6C800706499 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DBF32587272B30D700B42FE3 /* Extensie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Extensie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF3258A272B30D700B42FE3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DBF3258B272B30D700B42FE3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -92,6 +93,7 @@
 		DBF3257E272B30D700B42FE3 = {
 			isa = PBXGroup;
 			children = (
+				DBE80A4B272DF6C800706499 /* README.md */,
 				DBF32589272B30D700B42FE3 /* Extensie */,
 				DBF3259F272B30D900B42FE3 /* ExtensieTests */,
 				DBF325A9272B30D900B42FE3 /* ExtensieUITests */,
