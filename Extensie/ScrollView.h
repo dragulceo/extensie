@@ -10,8 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ScrollView : NSScrollView
-@property IBOutlet NSButton *button;
-@property IBOutlet NSImageView *imageViewItem;
+    @property IBOutlet NSImageView *imageViewItem;
 @end
 
 NS_ASSUME_NONNULL_END

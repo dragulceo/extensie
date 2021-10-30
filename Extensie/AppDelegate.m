@@ -18,9 +18,8 @@
     // Insert code here to initialize your application
     self.barItem = [NSStatusBar.systemStatusBar statusItemWithLength:NSVariableStatusItemLength];
     self.barItem.button.title = @"🚀";
-    //self.barItem.
     [self.barItem setAction:@selector(barItemAction)];
-    // Insert code here to initialize your application
+    
 }
 
 
@@ -35,7 +34,5 @@
 
 -(void)barItemAction {
     NSLog(@"🚀 button was clicked ");
-    
- 
 }
 @end

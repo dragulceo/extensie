@@ -10,18 +10,10 @@
 @implementation MainView
 
 
-- (void)drawScreen {
-   
-    
-}
-
-
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
     
     // Drawing code here.
-    //[self drawScreen];
-    
 }
 
 @end

@@ -36,16 +36,16 @@ CGPoint origin;
         } else {
             self.automaticallyAdjustsContentInsets = YES;
             //self.contentInsets = NSEdgeInsetsMake(0, 0, 0, 0);
-            [NSTimer scheduledTimerWithTimeInterval:0.1
+            [NSTimer scheduledTimerWithTimeInterval:0.016
                                                  target:self
                                                selector:@selector(theAction)
                                                userInfo:nil
                                                 repeats:YES];
-//            NSScreen *screen = [NSScreen mainScreen];
-//            trackingArea = [[NSTrackingArea alloc] initWithRect:screen.frame
-//                options: (NSTrackingMouseEnteredAndExited | NSTrackingMouseMoved | NSTrackingActiveInKeyWindow )
-//                owner:self userInfo:nil];
-//            [self addTrackingArea:trackingArea];
+            NSScreen *screen = [NSScreen mainScreen];
+            trackingArea = [[NSTrackingArea alloc] initWithRect:screen.frame
+                options: (NSTrackingMouseEnteredAndExited | NSTrackingMouseMoved | NSTrackingActiveInKeyWindow )
+                owner:self userInfo:nil];
+            [self addTrackingArea:trackingArea];
         }
     }
 }
@@ -53,43 +53,31 @@ CGPoint origin;
 NSPoint prevPos;
 
 - (void) drawScreen {
-    // Do any additional setup after loading the view.
-//    let viewToCapture = self.window!.contentView!
-//    let rep = viewToCapture.bitmapImageRepForCachingDisplay(in: viewToCapture.bounds)!
-//    viewToCapture.cacheDisplay(in: viewToCapture.bounds, to: rep)
-//
-//    let img = NSImage(size: viewToCapture.bounds.size)
-//    img.addRepresentation(rep)
-    
+
     NSPoint pos = [NSEvent mouseLocation];
     
-    if (abs(pos.x - prevPos.x) < 0.1 && abs(pos.y - prevPos.y) < 0.1) {
+    if (fabs(pos.x - prevPos.x) < 0.1 && fabs(pos.y - prevPos.y) < 0.1) {
         return;
     }
     prevPos = pos;
     
     NSScreen *screen = [NSScreen mainScreen];
     CGRect menu = CGRectMake(0, 0, screen.frame.size.width, 30);
-//    CGImageRef screenShot = CGWindowListCreateImage(CGRectInfinite, kCGWindowListOptionOnScreenOnly, kCGNullWindowID, kCGWindowImageDefault);
+
     CGImageRef screenShot = CGWindowListCreateImage(menu, kCGWindowListOptionOnScreenOnly, kCGNullWindowID, kCGWindowImageDefault);
     
     NSBitmapImageRep *bitmapRep = [[NSBitmapImageRep alloc] initWithCGImage:screenShot];
     // Create an NSImage and add the bitmap rep to it...
     NSImage *image = [[NSImage alloc] init];
     [image addRepresentation:bitmapRep];
-    //[bitmapRep release];
     bitmapRep = nil;
     
     CFRelease(screenShot);
     
     NSBitmapImageRep* bitmap
             = [self bitmapImageRepForCachingDisplayInRect:screen.frame];
-    //NSData *tiff = [bitmap TIFFRepresentation];
-    //[tiff writeToFile:[@"/tmp/snapshot.tiff" stringByExpandingTildeInPath]
-    //       atomically:YES];
     NSDictionary *imageProps = [NSDictionary dictionaryWithObject:[NSNumber numberWithFloat:0.9] forKey:NSImageCompressionFactor];
     NSData *imageData = [bitmap representationUsingType:NSPNGFileType properties:imageProps];
-    //[imageData writeToFile:@"/tmp/image.png" atomically:NO];
     CGRect fullFrame = screen.frame;
     CGRect frame = screen.frame;
     //fullFrame.size = image.size;
@@ -180,15 +168,7 @@ NSPoint prevPos;
 }
 
 - (void)mouseMoved:(NSEvent *)theEvent {
-    //NSPoint eyeCenter = [self convertPoint:[theEvent locationInWindow] fromView:nil];
-    //eyeBox = NSMakeRect((eyeCenter.x-10.0), (eyeCenter.y-10.0), 20.0, 20.0);
-    //[self setNeedsDisplayInRect:eyeBox];
-    //[self displayIfNeeded];
-    
-    NSPoint pos = [NSEvent mouseLocation];
-    //self.x = pos.x;
-    //[[self contentView] scrollToPoint:origin];
-    NSLog(@"%f %f", pos.x, pos.y);
+    //[self drawScreen];
 }
 
 @end
