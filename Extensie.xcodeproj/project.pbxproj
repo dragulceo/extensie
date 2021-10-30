@@ -43,6 +43,7 @@
 		DBE80A45272CEAEC00706499 /* MainWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
 		DBE80A47272CED4000706499 /* MainWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainWindow.h; sourceTree = "<group>"; };
 		DBE80A48272CED4000706499 /* MainWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainWindow.m; sourceTree = "<group>"; };
+		DBE80A4A272DF56200706499 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DBF32587272B30D700B42FE3 /* Extensie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Extensie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF3258A272B30D700B42FE3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DBF3258B272B30D700B42FE3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -111,6 +112,7 @@
 		DBF32589272B30D700B42FE3 /* Extensie */ = {
 			isa = PBXGroup;
 			children = (
+				DBE80A4A272DF56200706499 /* Info.plist */,
 				DBF3258A272B30D700B42FE3 /* AppDelegate.h */,
 				DBF3258B272B30D700B42FE3 /* AppDelegate.m */,
 				DBF3258D272B30D700B42FE3 /* ViewController.h */,
@@ -454,6 +456,7 @@
 				DEVELOPMENT_TEAM = XGA5FMFD8Y;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Extensie/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -480,6 +483,7 @@
 				DEVELOPMENT_TEAM = XGA5FMFD8Y;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Extensie/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
