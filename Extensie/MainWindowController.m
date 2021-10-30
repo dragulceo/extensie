@@ -13,6 +13,15 @@
 
 @implementation MainWindowController
 
+- (void)hideWindow: (NSWindow *)window {
+    [window orderOut:nil];
+}
+
+- (void)showWindow: (NSWindow *)window {
+    [window makeKeyAndOrderFront:nil];
+    [window setLevel:NSStatusWindowLevel];
+    [NSApp activateIgnoringOtherApps:YES];
+}
 
 - (void)attachToMousePosition {
     NSScreen *screen = [NSScreen mainScreen];
@@ -20,8 +29,13 @@
     CGRect position = self.window.frame;
     position.origin.x = pos.x + 10;
     position.origin.y = pos.y - self.window.frame.size.height - 10;
-    [self.window setFrameOrigin: position.origin];
-
+    if (pos.x > 1000 && pos.x < 1200 && pos.y > screen.frame.size.height - 30) {
+        [self.window setFrameOrigin: position.origin];
+        [self showWindow: self.window];
+    } else {
+        [self hideWindow: self.window];
+    }
+    //[self.window setFrameOrigin: position.origin];
 }
 
 
@@ -30,41 +44,21 @@
     
     [self attachToMousePosition];
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
-    
-    
-    
-    //self.window. = position;
-//    NSTrackingArea trackingArea = [[NSTrackingArea alloc] initWithRect:screen.frame
-//        options: (NSTrackingMouseEnteredAndExited | NSTrackingMouseMoved | NSTrackingActiveInKeyWindow )
-//        owner:self userInfo:nil];
-//    [self addTrackingArea:trackingArea];
+
     [NSEvent addGlobalMonitorForEventsMatchingMask:NSEventMaskMouseMoved handler:^(NSEvent *event){
-//        NSPoint pos = [NSEvent mouseLocation];
-//        NSLog(@"global: %f %f", [NSEvent mouseLocation].x, [NSEvent mouseLocation].y);
-//        CGRect position = self.window.frame;
-//        position.origin.x = pos.x + 10;
-//        position.origin.y = pos.y - self.window.frame.size.height - 10;
-//        //[self.window setFrameOrigin: position.origin];
-//        [self.window setFrame:position display:FALSE];
         [self attachToMousePosition];
     }];
     [NSEvent addLocalMonitorForEventsMatchingMask:NSEventMaskMouseMoved handler:^(NSEvent *event){
-//        NSPoint pos = [NSEvent mouseLocation];
-//        NSLog(@"local: %f %f", [NSEvent mouseLocation].x, [NSEvent mouseLocation].y);
-//        CGRect position = self.window.frame;
-//        //position.origin.x = pos.x + 10;
-//        position.origin.x = pos.x + 10;
-//        position.origin.y = pos.y - self.window.frame.size.height - 10;
-//        //[self.window setFrameOrigin: position.origin];
-//        [self.window setFrame:position display:FALSE];
-//        //self.window.contentView.frame = position;
-//
-//        //[self.window close];
-//        //[self.window setFrameTopLeftPoint:pos];
-//        //[self showWindow: self.window];
         [self attachToMousePosition];
         return event;
     }];
+    [self hideWindow: self.window];
 }
+
+
+//
+
+
+
 
 @end

@@ -8,13 +8,17 @@
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
-@property NSStatusItem *barItem ;
+
+@property NSStatusItem *barItem;
+@property bool visible;
+@property NSWindow *window;
 
 @end
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    self.visible = true;
     // Insert code here to initialize your application
     self.barItem = [NSStatusBar.systemStatusBar statusItemWithLength:NSVariableStatusItemLength];
     self.barItem.button.title = @"🚀";
@@ -31,21 +35,20 @@
     return YES;
 }
 
-bool visible = true;
-NSWindow *window;
+
 -(void)barItemAction {
-    if (window == nil) {
-        window =NSApplication.sharedApplication.mainWindow;
+    if (self.window == nil) {
+        self.window =NSApplication.sharedApplication.mainWindow;
     }
 
-    if (!visible) {
-        [window makeKeyAndOrderFront:nil];
-        [window setLevel:NSStatusWindowLevel];
+    if (!self.visible) {
+        [self.window makeKeyAndOrderFront:nil];
+        [self.window setLevel:NSStatusWindowLevel];
         [NSApp activateIgnoringOtherApps:YES];
-        visible = true;
+        self.visible = true;
     } else {
-        [window orderOut:nil];
-        visible = false;
+        [self.window orderOut:nil];
+        self.visible = false;
     }
 }
 @end
