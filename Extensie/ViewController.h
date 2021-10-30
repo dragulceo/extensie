@@ -8,7 +8,8 @@
 #import <Cocoa/Cocoa.h>
 
 @interface ViewController : NSViewController
-
+@property IBOutlet NSImageView *imageViewItem;
+@property IBOutlet NSButton *buttonItem;
 
 @end
 

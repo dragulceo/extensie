@@ -15,6 +15,8 @@
 		DBF325A1272B30D900B42FE3 /* ExtensieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF325A0272B30D900B42FE3 /* ExtensieTests.m */; };
 		DBF325AB272B30D900B42FE3 /* ExtensieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF325AA272B30D900B42FE3 /* ExtensieUITests.m */; };
 		DBF325AD272B30D900B42FE3 /* ExtensieUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF325AC272B30D900B42FE3 /* ExtensieUITestsLaunchTests.m */; };
+		DBF325C2272B4EA900B42FE3 /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF325C1272B4EA900B42FE3 /* MainView.m */; };
+		DBF325C8272B52E700B42FE3 /* ScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF325C7272B52E700B42FE3 /* ScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,10 @@
 		DBF325A6272B30D900B42FE3 /* ExtensieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExtensieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF325AA272B30D900B42FE3 /* ExtensieUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensieUITests.m; sourceTree = "<group>"; };
 		DBF325AC272B30D900B42FE3 /* ExtensieUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensieUITestsLaunchTests.m; sourceTree = "<group>"; };
+		DBF325C0272B4EA900B42FE3 /* MainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
+		DBF325C1272B4EA900B42FE3 /* MainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainView.m; sourceTree = "<group>"; };
+		DBF325C6272B52E700B42FE3 /* ScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollView.h; sourceTree = "<group>"; };
+		DBF325C7272B52E700B42FE3 /* ScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,10 @@
 				DBF3258E272B30D700B42FE3 /* ViewController.m */,
 				DBF32590272B30D900B42FE3 /* Assets.xcassets */,
 				DBF32592272B30D900B42FE3 /* Main.storyboard */,
+				DBF325C6272B52E700B42FE3 /* ScrollView.h */,
+				DBF325C7272B52E700B42FE3 /* ScrollView.m */,
+				DBF325C0272B4EA900B42FE3 /* MainView.h */,
+				DBF325C1272B4EA900B42FE3 /* MainView.m */,
 				DBF32595272B30D900B42FE3 /* main.m */,
 				DBF32597272B30D900B42FE3 /* Extensie.entitlements */,
 			);
@@ -258,8 +268,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBF3258F272B30D700B42FE3 /* ViewController.m in Sources */,
+				DBF325C2272B4EA900B42FE3 /* MainView.m in Sources */,
 				DBF32596272B30D900B42FE3 /* main.m in Sources */,
 				DBF3258C272B30D700B42FE3 /* AppDelegate.m in Sources */,
+				DBF325C8272B52E700B42FE3 /* ScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

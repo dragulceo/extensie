@@ -8,13 +8,18 @@
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
-
+@property NSStatusItem *barItem ;
 
 @end
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    // Insert code here to initialize your application
+    self.barItem = [NSStatusBar.systemStatusBar statusItemWithLength:NSVariableStatusItemLength];
+    self.barItem.button.title = @"🚀";
+    //self.barItem.
+    [self.barItem setAction:@selector(barItemAction)];
     // Insert code here to initialize your application
 }
 
@@ -28,5 +33,9 @@
     return YES;
 }
 
-
+-(void)barItemAction {
+    NSLog(@"🚀 button was clicked ");
+    
+ 
+}
 @end
