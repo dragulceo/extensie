@@ -22,7 +22,17 @@
     // Insert code here to initialize your application
     self.barItem = [NSStatusBar.systemStatusBar statusItemWithLength:NSVariableStatusItemLength];
     self.barItem.button.title = @"🚀";
-    [self.barItem setAction:@selector(barItemAction)];
+    self.barItem.button.image = [NSImage imageNamed:@"Icon"];
+    [self.barItem.button setAction:@selector(barItemAction)];
+    NSMenu *menu = [[NSMenu alloc] initWithTitle:@"Main menu"];
+    NSMenuItem *menuItem = [[NSMenuItem alloc] initWithTitle:@"Exit" action:@selector(exit) keyEquivalent:@"q"];
+    [menu addItem:menuItem];
+    self.barItem.menu = menu;
+}
+
+- (void)exit {
+    NSLog(@"exit");
+    [NSApplication.sharedApplication terminate:nil];
 }
 
 
