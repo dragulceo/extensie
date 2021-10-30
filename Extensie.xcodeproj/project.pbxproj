@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DBE80A46272CEAEC00706499 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE80A45272CEAEC00706499 /* MainWindowController.m */; };
+		DBE80A49272CED4000706499 /* MainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE80A48272CED4000706499 /* MainWindow.m */; };
 		DBF3258C272B30D700B42FE3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF3258B272B30D700B42FE3 /* AppDelegate.m */; };
 		DBF3258F272B30D700B42FE3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF3258E272B30D700B42FE3 /* ViewController.m */; };
 		DBF32591272B30D900B42FE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBF32590272B30D900B42FE3 /* Assets.xcassets */; };
@@ -37,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DBE80A44272CEAEC00706499 /* MainWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
+		DBE80A45272CEAEC00706499 /* MainWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
+		DBE80A47272CED4000706499 /* MainWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainWindow.h; sourceTree = "<group>"; };
+		DBE80A48272CED4000706499 /* MainWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainWindow.m; sourceTree = "<group>"; };
 		DBF32587272B30D700B42FE3 /* Extensie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Extensie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF3258A272B30D700B42FE3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DBF3258B272B30D700B42FE3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -111,6 +117,10 @@
 				DBF3258E272B30D700B42FE3 /* ViewController.m */,
 				DBF32590272B30D900B42FE3 /* Assets.xcassets */,
 				DBF32592272B30D900B42FE3 /* Main.storyboard */,
+				DBE80A44272CEAEC00706499 /* MainWindowController.h */,
+				DBE80A45272CEAEC00706499 /* MainWindowController.m */,
+				DBE80A47272CED4000706499 /* MainWindow.h */,
+				DBE80A48272CED4000706499 /* MainWindow.m */,
 				DBF325C6272B52E700B42FE3 /* ScrollView.h */,
 				DBF325C7272B52E700B42FE3 /* ScrollView.m */,
 				DBF325C0272B4EA900B42FE3 /* MainView.h */,
@@ -267,9 +277,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBE80A46272CEAEC00706499 /* MainWindowController.m in Sources */,
 				DBF3258F272B30D700B42FE3 /* ViewController.m in Sources */,
 				DBF325C2272B4EA900B42FE3 /* MainView.m in Sources */,
 				DBF32596272B30D900B42FE3 /* main.m in Sources */,
+				DBE80A49272CED4000706499 /* MainWindow.m in Sources */,
 				DBF3258C272B30D700B42FE3 /* AppDelegate.m in Sources */,
 				DBF325C8272B52E700B42FE3 /* ScrollView.m in Sources */,
 			);

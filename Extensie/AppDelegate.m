@@ -19,7 +19,6 @@
     self.barItem = [NSStatusBar.systemStatusBar statusItemWithLength:NSVariableStatusItemLength];
     self.barItem.button.title = @"🚀";
     [self.barItem setAction:@selector(barItemAction)];
-    
 }
 
 
@@ -32,7 +31,21 @@
     return YES;
 }
 
+bool visible = true;
+NSWindow *window;
 -(void)barItemAction {
-    NSLog(@"🚀 button was clicked ");
+    if (window == nil) {
+        window =NSApplication.sharedApplication.mainWindow;
+    }
+
+    if (!visible) {
+        [window makeKeyAndOrderFront:nil];
+        [window setLevel:NSStatusWindowLevel];
+        [NSApp activateIgnoringOtherApps:YES];
+        visible = true;
+    } else {
+        [window orderOut:nil];
+        visible = false;
+    }
 }
 @end

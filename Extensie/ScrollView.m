@@ -74,10 +74,9 @@ NSPoint prevPos;
     
     CFRelease(screenShot);
     
-    NSBitmapImageRep* bitmap
-            = [self bitmapImageRepForCachingDisplayInRect:screen.frame];
-    NSDictionary *imageProps = [NSDictionary dictionaryWithObject:[NSNumber numberWithFloat:0.9] forKey:NSImageCompressionFactor];
-    NSData *imageData = [bitmap representationUsingType:NSPNGFileType properties:imageProps];
+    //NSBitmapImageRep* bitmap = [self bitmapImageRepForCachingDisplayInRect:screen.frame];
+    //NSDictionary *imageProps = [NSDictionary dictionaryWithObject:[NSNumber numberWithFloat:0.9] forKey:NSImageCompressionFactor];
+    //NSData *imageData = [bitmap representationUsingType:NSPNGFileType properties:imageProps];
     CGRect fullFrame = screen.frame;
     CGRect frame = screen.frame;
     //fullFrame.size = image.size;
