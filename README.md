@@ -4,4 +4,4 @@
 ![Icon](Extensie/Assets.xcassets/AppIcon.appiconset/extensie_icon_128.png?raw=true)
 
 
-Download the app from here: [Extensie.app.zip](builds/Extensie.app.zip)
+Download the app from here: [Releases](https://github.com/dragulceo/extensie/releases)
